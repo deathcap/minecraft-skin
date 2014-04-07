@@ -64,7 +64,7 @@ scene.add(viking.mesh)
 var walk = require('voxel-walk')
 
 var render = function () {
-  window.webkitRequestAnimationFrame(render, renderer.domElement);
+  window.requestAnimationFrame(render, renderer.domElement);
   var oldRad = rad;
   
   walk.render(viking, time)
@@ -97,7 +97,7 @@ var render = function () {
 };
 
 function renderStatic() {
-  window.webkitRequestAnimationFrame(renderStatic, renderer.domElement);
+  window.requestAnimationFrame(renderStatic, renderer.domElement);
   camera.position.copy({x: 0, y: 5, z: -10})
   camera.position.setLength(70);
   camera.lookAt(new THREE.Vector3(0, 1.5, 0));
